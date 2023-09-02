@@ -1,0 +1,18 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+#resultado{
+    color: aliceblue;
+    padding: 40px;
+    border: 1px solid white;
+    text-align: center;
+}
