@@ -6,8 +6,6 @@
 
 body{
     background-color: #333;
-    display: flex;
-    justify-content: center;
 }
 
 #resultado{
@@ -15,4 +13,22 @@ body{
     padding: 40px;
     border: 1px solid white;
     text-align: center;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.todo{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    padding: 10px 20px;
+    margin-inline: 2px;
+    cursor: pointer;
+}
+
+.contenedor-resultado{
+    display: flex;
+    justify-content: center;
 }

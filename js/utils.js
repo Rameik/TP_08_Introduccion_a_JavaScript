@@ -7,7 +7,7 @@ function calcularEdad() {
     fechaNac = new Date(fecha);
     fechaHoy = new Date();
 
-    if(nombre != "" || nombre != null)
+    if(nombre != "" && nombre != null)
         console.log(`Hola ${nombre}, tenes ${(fechaHoy.getFullYear() - fechaNac.getFullYear())} años!`);
 }
 
@@ -20,11 +20,15 @@ function tirarFruta() {
     
     const encontro = arrayFrutas.find(fruta => fruta === frutaPedida);
 
-    if (encontro === frutaPedida) {
-        console.log("Si, tenemos " + frutaPedida + "!");
-    }
-    else{
-        console.log("No, no tenemos " + frutaPedida + "!");
+    console.log(frutaPedida);
+
+    if(frutaPedida != null && frutaPedida != ""){
+        if (encontro === frutaPedida) {
+            console.log("Si, tenemos " + frutaPedida + "!");
+        }
+        else{
+            console.log("No, no tenemos " + frutaPedida + "!");
+        }
     }
     
 }
@@ -79,12 +83,11 @@ function arrayDoble(arrayViejo) {
 }
 
 // Punto 6: dibujarTriangulo1();
-// 
-dibujarTriangulo2(5);
+// dibujarTriangulo2(5);
 
 function dibujarTriangulo1() {
     const asterisco = '*';
-    let string;
+    let string = "";
 
     for (let i = 0; i < 6; i++) {
         string += asterisco;
@@ -171,5 +174,7 @@ function calcularRecaudacion() {
         total += parseFloat(listaB[item][1]);
     }
 
-    resultado.innerHTML = total;
+    if (!isNaN(total)) {
+        resultado.innerHTML = "El total de la recaudacion es " + total;
+    }
 }
