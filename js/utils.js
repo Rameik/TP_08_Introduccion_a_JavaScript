@@ -1,3 +1,10 @@
+function capitalize(text) {
+    const firstLetter = text.charAt(0);
+    const rest = text.slice(1);
+    return firstLetter.toUpperCase() + rest;
+}
+
+
 // Punto 1: calcularEdad();
 
 function calcularEdad() {
@@ -16,11 +23,15 @@ function calcularEdad() {
 function tirarFruta() {
     const arrayFrutas = ["Banana", "Manzana", "Uva", "Melon", "Sandia", "Pera", "Arandano", "Mandarina", "Naranja", "Durazno"];
 
-    let frutaPedida = prompt("Ingresa una fruta", "");
-    
-    const encontro = arrayFrutas.find(fruta => fruta === frutaPedida);
+    arrayFrutas.forEach(fruta => {
+        console.log(`|${fruta}|`);
+    });
 
-    console.log(frutaPedida);
+    let frutaPedida = prompt("Ingresa una fruta", "");
+
+    frutaPedida = capitalize(frutaPedida);
+
+    const encontro = arrayFrutas.find(fruta => fruta === frutaPedida);
 
     if(frutaPedida != null && frutaPedida != ""){
         if (encontro === frutaPedida) {
